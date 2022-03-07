@@ -1,0 +1,44 @@
+{% extends 'profil.html' %}
+
+{% block content %} 
+<div class="block-text">
+    You have completed 
+
+    {% if not (tuto0 or tuto1 or tuto2 or tuto3 or tuto4) %}
+        nothing yet
+    {% else %}
+    <ul>
+
+        {% if tuto0 %}
+        <li>the Introduction</li>
+        {% endif %}
+
+        {% if tuto1 %}
+        <li>the Molecular Simulation</li>
+        {% endif %}
+
+        {% if tuto2 %}
+        <li>the Neural Network Training</li>
+        {% endif %}
+
+        {% if tuto3 %}
+        <li>the Quality of the CVs</li>
+        {% endif %}
+
+        {% if tuto4 %}
+        <li>the Ball is in your court part</li>
+        {% endif %}
+
+    </ul>
+    {% endif %}
+    
+    in the tutorial !
+    
+    {% if not (tuto0 and tuto1 and tuto2 and tuto3 and tuto4) %}
+        Keep Going !
+    {% else %}
+        Great Job !
+    {% endif %}
+
+</div> 
+ {% endblock %}
