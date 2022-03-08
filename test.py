@@ -19,7 +19,7 @@ from datetime import datetime, timedelta
 import potentials as pt
 import autoencoders as ae
 <<<<<<< Updated upstream
-import dihedral_angles as rama
+
 =======
 #import dihedral_angles as rama
 >>>>>>> Stashed changes
@@ -314,7 +314,7 @@ def explication4():
     if current_user.is_authenticated:
         session['tuto4']=True
     url=fetch_url("dialanine")
-
+    """"
     if request.method == 'POST':
         try :
             phi_atom = [int(request.form['phi_atom1'])-1, int(request.form['phi_atom2'])-1, int(request.form['phi_atom3'])-1, int(request.form['phi_atom4'])-1]
@@ -328,7 +328,7 @@ def explication4():
         anim_fig.write_html('static/plot/rama_frame.html', full_html=False,include_plotlyjs='cdn')
         return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=True)  
 
-    return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=False)
+    return render_template('explication4.html', title='Explanation', url=url, error=False, completed_form=False)"""
 
 @app.route('/explication/codeNN')
 def codeAE():
